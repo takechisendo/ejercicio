@@ -48,7 +48,7 @@ def do(signer, body):
             logging.getLogger().info("Successfully retrieved connection")
        
             load_data(input_csv_text, dbconnection)
-            """
+            
             messageDetails = oci.ons.models.MessageDetails(
                 body="Load process complete", title="Racing to the cloud :: " + companyName)
 
@@ -56,7 +56,7 @@ def do(signer, body):
             ons_client.publish_message(topicId,messageDetails) 
 
             logging.getLogger().info("Load process complete")
-            """
+            
  
         else:
             raise SystemExit("File extension is not supported")    
