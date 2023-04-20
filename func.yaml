@@ -1,0 +1,13 @@
+schema_version: 20180708
+name: nosql-load-file
+version: 0.0.16
+runtime: python
+build_image: fnproject/python:3.9-dev
+run_image: fnproject/python:3.9
+entrypoint: /python/bin/fdk /function/func.py handler
+memory: 2048
+timeout: 300
+config:
+  COMPANY: ACME CORP XXXXXX
+  TABLE_NAME: Employees
+  TOPIC_OCID: ocid1.onstopic.oc1.iad.aaaaaaaagruoyyzvxufczc5o427q6o3ytmarseosb5eeuanpreobhuucotna
